@@ -2,6 +2,8 @@
 
 **Made by LowBacon.**
 
+[![XERJ Corpus Hub contributor](https://hub.xerj.org/contributors/LowBacon/badge.svg)](https://hub.xerj.org/contributors/LowBacon)
+
 Real Minecraft Java Edition 26.3 runs next to GTA V (story mode) and is drawn into GTA's picture, as if Minecraft were part
 of Los Santos. GTA's camera moves Minecraft's camera. GTA's streets are solid ground in Minecraft. The blocks you build are
 solid for GTA's people and cars. TNT, creepers, arrows, fireworks, swords and ender pearls work in both games at once.
