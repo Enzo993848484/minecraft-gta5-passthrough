@@ -1,23 +1,17 @@
 
-
-name: Build Minecraft 26.3 Fabric
+name: Build Minecraft GTA V Passthrough
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
-  workflow_dispatch:
-
-permissions:
-  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Java 25
@@ -26,20 +20,18 @@ jobs:
           distribution: temurin
           java-version: '25'
 
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-
-      - name: Build Fabric Mod
+      - name: Build Passthrough
         run: |
           chmod +x mc/gradlew
           ./mc/gradlew -p mc build
 
-      - name: Upload Minecraft Mod
+      - name: Upload Passthrough JAR
         uses: actions/upload-artifact@v4
         with:
-          name: passthrough-minecraft-26.3
+          name: passthrough-0.1.0
           path: mc/build/libs/*.jar
           if-no-files-found: error
+
 
 
 
